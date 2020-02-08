@@ -433,6 +433,12 @@ h1 {
   cursor: pointer;
 }
 
+h1 svg {
+  width: 75vw;
+  max-width: 100%;
+  height: auto;
+}
+
 /* stretch the overlay to cover the available viewport */
 .overlay__wrapper {
   position: fixed;
