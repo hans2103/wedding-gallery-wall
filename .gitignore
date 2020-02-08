@@ -1,0 +1,22 @@
+# Joomla System Files (i.e. cache, etc.) #
+
+# IDE & System Related Files #
+.buildpath
+.project
+.settings
+.DS_Store
+.idea
+
+# OSX #
+._*
+.Spotlight-V100
+.Trashes
+
+# Windows #
+Thumbs.db
+Desktop.ini
+
+# Tools #
+/node_modules
+
+/.env

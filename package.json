@@ -1,0 +1,97 @@
+{
+  "name": "perfectsite",
+  "version": "5.11.0",
+  "license": "GPL-3.0",
+  "description": "Perfect Site",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hans2103/wedding-gallery-wall.git"
+  },
+  "author": "Perfect Web Team",
+  "bugs": {
+    "url": "https://github.com/hans2103/wedding-gallery-wall/issues"
+  },
+  "homepage": "https://github.com/hans2103/wedding-gallery-wall#readme",
+  "config": {
+    "src": "public_html/assets",
+    "dist": "public_html/",
+    "port": "7378",
+    "proxy": "local.wedding-gallery-wall.nl"
+  },
+  "browserslist": [
+    "> 2% in NL",
+    "not dead",
+    "IE 11",
+    "not op_mini all"
+  ],
+  "babel": {
+    "presets": [
+      [
+        "@babel/preset-env",
+        {
+          "useBuiltIns": "entry",
+          "corejs": 2,
+          "modules": false
+        }
+      ],
+      [
+        "minify",
+        {
+          "builtIns": false
+        }
+      ]
+    ],
+    "comments": false
+  },
+  "engines": {
+    "node": ">=12"
+  },
+  "scripts": {
+    "install:clean": "rm -rf node_modules/ && rm -rf package-lock.json && nvm use stable; npm install",
+    "reinstall": "rimraf ./node_modules && npm install",
+    "prestart": "node ./build/tasks/build.js",
+    "start": "node ./build/tasks/browser-sync.js"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.8.4",
+    "@babel/preset-env": "^7.8.4",
+    "@khanacademy/tota11y": "^0.2.0",
+    "autoprefixer": "^9.7.4",
+    "babel-eslint": "^10.0.3",
+    "babel-preset-minify": "^0.5.1",
+    "browser-sync": "^2.26.7",
+    "concat": "^3.0.0",
+    "core-js": "^3.6.4",
+    "dotenv": "^8.2.0",
+    "eslint": "^6.8.0",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "font-face": "^2.3.2",
+    "illusion": "github:timble/illusion",
+    "lsof": "^0.1.0",
+    "mocha": "^7.0.1",
+    "modernizr": "^3.9.0",
+    "node-sass": "^4.13.1",
+    "postcss-clean": "^1.1.0",
+    "postcss-cli": "^7.1.0",
+    "ps-node": "^0.1.6",
+    "rimraf": "^3.0.1",
+    "stylelint": "^13.0.0",
+    "stylelint-config-recommended-scss": "^4.2.0",
+    "stylelint-config-standard": "^19.0.0",
+    "stylelint-order": "^4.0.0",
+    "stylelint-scss": "^3.14.2",
+    "svgo": "^1.3.2",
+    "svgstore-cli": "^1.3.1",
+    "uninstall": "0.0.0"
+  },
+  "dependencies": {
+    "apollo.js": "github:toddmotto/apollo",
+    "jquery": "^3.4.1",
+    "modern-css-reset": "^1.1.0",
+    "optimised-svgs": "github:perfectwebteam/optimised-svgs",
+    "vanilla-js-responsive-menu": "github:robinpoort/vanilla-js-responsive-menu"
+  }
+}
