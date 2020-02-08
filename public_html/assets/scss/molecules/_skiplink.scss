@@ -1,0 +1,47 @@
+/**
+ * Skip to content link
+ *
+ * 1. Hide by default
+ * 2. Display on focus
+ */
+
+.skip {
+  position: relative;
+  z-index: 33;
+  max-width: $illusion-grid-maxwidth;
+  margin: 0 auto;
+  color: inherit;
+  background: inherit;
+
+  .container {
+    margin-bottom: 0;
+    color: inherit;
+    background: inherit;
+  }
+
+  a {
+    position: absolute;
+    top: 0;
+    left: -9999em; /* 1 */
+    z-index: 9;
+    display: inline-block;
+    padding: 0 24px;
+    color: inherit;
+    background: inherit;
+
+    &:focus {
+      left: 0; /* 2 */
+      width: 50%;
+      height: 32px;
+      margin: 8px;
+      line-height: 32px;
+      text-align: center;
+    }
+  }
+}
+
+/* Remove outline from main element */
+
+.main {
+  outline: none;
+}

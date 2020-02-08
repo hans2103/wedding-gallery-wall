@@ -1,0 +1,17 @@
+/*
+ * Styling to make certain elements more visible inside the styleguide
+ * Add to the dev.css file since that is always loaded on the styleguide
+ */
+
+.sg-layout {
+  .container {
+    @include spacing(horizontal, margin, -1);
+  }
+  .container,
+  .content,
+  .grid__item {
+    background: rgba(magenta, .1);
+    outline: 1px solid #f0f;
+    outline-offset: -1px;
+  }
+}

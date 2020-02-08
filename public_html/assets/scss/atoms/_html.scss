@@ -1,0 +1,4 @@
+html {
+  @include interpolate(font-size, 320px, 1200px, 14px, 20px);
+  scroll-behavior: smooth;
+}

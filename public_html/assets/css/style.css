@@ -1,0 +1,501 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default padding */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Remove list styles on ul, ol elements with a class attribute */
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Natural flow and rhythm in articles by default */
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Blur images when they have no alt attribute */
+img:not([alt]) {
+  filter: blur(10px);
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/**
+   * Border-box everything
+   */
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/**
+   * Anchors
+   *
+   * 1. Inherit color to follow current text color. Useful in footer blocks etc.
+        Probably wise to change the anchor color in the main text to stand out a bit more
+   * 2. Remove text-decoration on hover and focus
+   */
+a {
+  color: inherit;
+  /* 1 */
+}
+
+a:hover, a:focus {
+  text-decoration: none;
+  /* 2 */
+}
+
+/**
+   * Address
+   *
+   * 1. Normal font style
+   * 2. Remove top-margin, margins should live on bottom of elements
+   * 3. Set bottom margin to default line-height and remove for last-child
+   */
+address {
+  font-style: normal;
+  /* 1 */
+  margin-top: 0;
+  /* 2 */
+  margin-bottom: 16px;
+  /* 3 */
+}
+
+address:last-child {
+  margin-bottom: 0;
+}
+
+/**
+   * Body
+   *
+   * Set font values coming from variables
+   */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #0b0c0c;
+}
+
+/**
+   * Fieldset
+   */
+fieldset {
+  width: 100%;
+  border: 0 none;
+  padding: 0;
+  margin: 0;
+}
+
+fieldset legend {
+  margin-bottom: 8px;
+}
+
+fieldset legend:last-child {
+  margin-bottom: 0;
+}
+
+/**
+   * Figure
+   */
+figure {
+  margin-top: 0;
+  margin-right: 0;
+  margin-left: 0;
+  margin-bottom: 16px;
+}
+
+figure:last-child {
+  margin-bottom: 0;
+}
+
+/**
+   * Heading
+   *
+   * 1. Set font-weight to bold to stand out
+   * 2. Reset font-size to be as big as parent font size.
+        Set font-sizes with classes
+   * 3. Remove top-margin, margins should live on bottom of elements
+   * 4. Set bottom margin to default line-height and remove for last-child. A bit smaller to visually group headings with content below
+   */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  /* 1 */
+  font-size: inherit;
+  /* 2 */
+  margin-top: 0;
+  /* 3 */
+  margin-bottom: 16px;
+  /* 4 */
+}
+
+h1:last-child, h2:last-child, h3:last-child, h4:last-child, h5:last-child, h6:last-child {
+  margin-bottom: 0;
+}
+
+/**
+   * Image
+   *
+   * 1. Set max-width for responsive images
+   * 2. Set ehight to auto to keep aspect ratio
+   * 3. Vertical align middle for only child images to remove line-height bug when used in an anchor for example
+   */
+img {
+  max-width: 100%;
+  /* 1 */
+  height: auto;
+  /* 2 */
+}
+
+img:only-child {
+  vertical-align: middle;
+  /* 3 */
+}
+
+/**
+   * List
+   *
+   * 1. Remove top-margin, margins should live on bottom of elements
+   * 2. Set bottom margin to default line-height and remove for last-child
+   */
+ul, ol {
+  margin-top: 0;
+  /* 1 */
+  margin-bottom: 16px;
+  /* 2 */
+}
+
+ul:last-child, ol:last-child {
+  margin-bottom: 0;
+}
+
+/**
+   * Paragraph
+   *
+   * 1. Remove top-margin, margins should live on bottom of elements
+   * 2. Set bottom margin to default line-height and remove for last-child
+   */
+p {
+  margin-top: 0;
+  /* 1 */
+  margin-bottom: 16px;
+  /* 2 */
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+/**
+   * Picture
+   *
+   * 1. Set img vertical align to middle within picture element
+   */
+picture img {
+  vertical-align: middle;
+  /* 1 */
+}
+
+/**
+   * SVG
+   *
+   * 1. Set with and height to 1em for easy use as icons
+   * 2. Set fill to currentcolor for easy use as icons
+   * 3. Hide svg-sprite for default when used as icons
+   */
+svg {
+  width: 1em;
+  /* 1 */
+  height: 1em;
+  /* 1 */
+  fill: currentColor;
+  /* 2 */
+}
+
+.svg-sprite {
+  display: none;
+  /* 3 */
+}
+
+/**
+* Requires the calc-interpolation function which can also be used independently
+*/
+/**
+*
+*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html {
+  font-size: 14px;
+}
+
+@media screen and (min-width: 320px) {
+  html {
+    font-size: calc(0.68182vw + 11.81818px);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  html {
+    font-size: 20px;
+  }
+}
+
+/* center the grid in the viewport */
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #ff0099;
+  background: rgba(46, 184, 178, 0.5);
+  font-family: Verdana, arial, serif;
+}
+
+@supports (display: grid) {
+  body {
+    display: block;
+  }
+}
+
+.gallery__message {
+  border: 1px solid #d2d0d0;
+  padding: 2em;
+  font-size: 1.7vw;
+  box-shadow: -2px 2px 10px 0px rgba(68, 68, 68, 0.4);
+}
+
+@supports (display: grid) {
+  .gallery__message {
+    display: none;
+  }
+}
+
+.gallery__wrapper {
+  display: none;
+  padding: 2em;
+}
+
+@supports (display: grid) {
+  .gallery__wrapper {
+    display: block;
+  }
+}
+
+.gallery__wrapper > * + * {
+  padding-top: 1.5em;
+  border-top: 4px solid #ff0099;
+}
+
+.gallery__wrapper > *:last-child {
+  padding-bottom: 1.5em;
+  border-bottom: 4px solid #ff0099;
+}
+
+h1 {
+  max-width: 60ch;
+  font-size: 1rem;
+  margin: 0 auto 1.5em;
+}
+
+.gallery__grid {
+  margin: 0 auto;
+  max-width: 1200px;
+  width: 90vw;
+  /* display the anchor links in a grid */
+  display: grid;
+  grid-gap: 1.5em;
+  grid-template-columns: repeat(auto-fit, 180px);
+  grid-auto-rows: calc(180px - 1.5em);
+  /* center the content horizontally & vertically */
+  justify-content: center;
+  align-content: center;
+  grid-auto-flow: dense;
+}
+
+.gallery__grid img {
+  object-fit: cover;
+  display: block;
+  width: 100%;
+  height: 100%;
+  /* transition the scale and brightness of the image when hover/focus-ing on the anchor link */
+  filter: brightness(0.6);
+  transition: all 0.3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  transform: scale(1);
+}
+
+.gallery__item {
+  /* remove overflow to give the impression of a zoom when scaling the image up */
+  overflow: hidden;
+  /* update the size of a few selected cells */
+  /* the default overflow is substituted by the scale/brightness of the nested images */
+}
+
+.gallery__item.horizontal {
+  grid-column: span 2;
+}
+
+.gallery__item.square {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.gallery__item.vertical {
+  grid-row: span 2;
+}
+
+.gallery__item:focus {
+  outline: none;
+}
+
+.gallery__item:focus img, .gallery__item:hover img {
+  transform: scale(1.1);
+  filter: brightness(1);
+}
+
+.gallery__figure {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+/* stretch the overlay to cover the available viewport */
+.overlay__wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* center te image horizontally & vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(5px);
+  /* transition the opacity and visibility when the class of .overlay is added on the div container */
+  transition: all 0.5s ease-in-out;
+  opacity: 0;
+  visibility: hidden;
+  /* slight delay as the class is added and the overlay is meant to be shown */
+  /* size the image according to both the width and height of the viewport */
+  /* absolute position the button in the top right corner of the overlay */
+}
+
+.overlay__wrapper.overlay {
+  transition-delay: 0.2s;
+  opacity: 1;
+  visibility: visible;
+}
+
+.overlay__wrapper img {
+  height: 90vh;
+  width: 85vw;
+  max-width: 700px;
+  object-fit: contain;
+}
+
+.overlay__wrapper .button {
+  color: inherit;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 3rem;
+  height: 3rem;
+  background: none;
+  border: none;
+  padding: 0.25rem;
+  fill: currentColor;
+  outline-color: currentColor;
+  /* transition the opacity on hover/focus */
+  opacity: 0.5;
+  transition: all 0.3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+
+.overlay__wrapper .button:hover, .overlay__wrapper .button:focus {
+  opacity: 1;
+}
+
+.overlay__wrapper .button svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  pointer-events: none;
+}
+
+.overlay__wrapper .button__download {
+  right: 4rem;
+}
