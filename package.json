@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "export": "next build && next export"
   },
   "repository": {
     "type": "git",
@@ -20,7 +21,12 @@
   },
   "homepage": "https://github.com/hans2103/wedding-gallery-wall#readme",
   "dependencies": {
+    "@zeit/next-sass": "^1.0.1",
+    "illusion": "github:timble/illusion",
+    "modern-css-reset": "^1.1.0",
+    "netlify-cli": "^2.32.0",
     "next": "^9.2.1",
+    "node-sass": "^4.13.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0"
   }

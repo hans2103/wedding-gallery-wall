@@ -1,22 +1,30 @@
 import Header from './Header/Header'
-import Warning from './Warning'
 import Section from './Section/Section'
+import data from "../data/data";
 
-const layoutStyle = {
-	margin: 20,
-	padding: 20,
-	border: '1px solid #DDD'
+const divStyle = {
+	display: 'block',
+	padding: '2em'
 }
 
-export default function Layout(props) {
+const Layout = props => {
 	return (
-		<div style={layoutStyle}>
-			<Warning />
-			<Header />
+		<div className="gallery__wrapper" style={divStyle}>
+			<Header/>
 			{props.children}
-			<Section />
-			<Section />
-			<Section />
+			{
+				data.photos.map((data, i) => {
+					return (
+						<Section
+							key={i}
+							title = {data.title}
+							photos = {data.photos}
+							/>
+					)
+				})
+			}
 		</div>
 	)
 }
+
+export default Layout

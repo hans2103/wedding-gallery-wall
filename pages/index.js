@@ -1,9 +1,6 @@
 import Layout from '../components/Layout.js'
+import "../styles/styles.scss"
 
-export default function Index() {
-	return (
-		<Layout>
-			<p>Hello Next.js</p>
-		</Layout>
-	);
-}
+export default () => (
+	<Layout className="app" />
+)

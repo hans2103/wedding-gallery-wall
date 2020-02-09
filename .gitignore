@@ -21,3 +21,7 @@ Desktop.ini
 
 /.env
 .next
+
+# Local Netlify folder
+.netlify
+out
