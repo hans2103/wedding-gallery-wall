@@ -2,14 +2,9 @@ import Header from './Header/Header'
 import Section from './Section/Section'
 import data from "../data/data";
 
-const divStyle = {
-	display: 'block',
-	padding: '2em'
-}
-
 const Layout = props => {
 	return (
-		<div className="gallery__wrapper" style={divStyle}>
+		<div className="gallery__wrapper">
 			<Header/>
 			{props.children}
 			{
@@ -17,12 +12,34 @@ const Layout = props => {
 					return (
 						<Section
 							key={i}
-							title = {data.title}
-							photos = {data.photos}
-							/>
+							title={data.title}
+							photos={data.photos}
+						/>
 					)
 				})
 			}
+			<style jsx>{`
+.gallery__wrapper {			
+  	display: none;
+  	padding: 2em;
+}
+
+@supports(display: grid) {
+	.gallery__wrapper {	
+    	display: block;
+	}
+}
+
+.gallery__wrapper > * + * {
+    padding-top: 1.5em;
+    border-top: 4px solid #ff0099;
+}
+
+.gallery__wrapper > *:last-child {
+    padding-bottom: 1.5em;
+    border-bottom: 4px solid #ff0099;
+}			
+			`}</style>
 		</div>
 	)
 }
