@@ -1,13 +1,13 @@
 // Normalize
-@import "../node_modules/modern-css-reset/src/reset";
+@import "../../node_modules/modern-css-reset/src/reset";
 
 // Settings
 @import "tools/tools";
 
 // Atoms
-//@import "atoms/root";
-//@import "atoms/html";
-//@import "atoms/body";
+@import "atoms/root";
+@import "atoms/html";
+@import "atoms/body";
 
 // Molecules
 @import "molecules/overlay";

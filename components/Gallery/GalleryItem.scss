@@ -1,0 +1,29 @@
+.gallery__item {
+  list-style: none;
+  box-shadow: 0 5px 15px -8px rgba(0, 0, 0, 0.24), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+
+  &.horizontal {
+    grid-column: span 2;
+  }
+
+  &.square {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+
+  &.vertical {
+    grid-row: span 2;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus,
+  &:hover {
+    img {
+      transform: scale(1.1);
+      filter: brightness(1);
+    }
+  }
+}

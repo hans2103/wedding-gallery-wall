@@ -1,17 +1,11 @@
 import Image from '../Image/Image'
+import css from './Figure.scss'
 
 const Figure = (props) => (
-	<figure className="gallery__figure">
+	<figure className={css.gallery__figure}>
 		<Image
 			src={props.image}
 			alt={props.alt}/>
-		<style jsx>{`
-		.gallery__figure {
-			width: 100%;
-  			height: 100%;
-  			cursor: pointer;
-  			}
-		`}</style>
 	</figure>
 )
 

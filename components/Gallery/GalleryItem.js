@@ -1,39 +1,22 @@
 import Figure from '../Figure/Figure'
+import classNames from 'classnames/bind';
+import css from './GalleryItem.scss'
+
+let cx = classNames.bind(css)
 
 const GalleryItem = props => {
+	let className = cx({
+		gallery__item: true,
+		horizontal: props.style === 'horizontal',
+		vertical: props.style === 'vertical',
+		square: props.style === 'square'
+	})
+
 	return (
-		<li className={`gallery__item ${props.style}`}>
+		<li className={className}>
 			<Figure
 				image={props.image}
 				alt={props.alt}/>
-			<style jsx>{`
-.gallery__item {
-	overflow: hidden;
-}
-
-.gallery__item.horizontal {
-	grid-column: span 2;
-}
-
-.gallery__item.square {
-    grid-column: span 2;
-    grid-row: span 2;
-}
-
-.gallery__item.vertical {
-    grid-row: span 2;
-}
-
-.gallery__item:focus {
-    outline: none;
-}
-
-.gallery__item:focus img,
-.gallery__item:hover img {
-	transform: scale(1.1);
-	filter: brightness(1);
-}
-				`}</style>
 		</li>
 	)
 }

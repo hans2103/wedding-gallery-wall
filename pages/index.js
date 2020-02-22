@@ -1,6 +1,5 @@
-import Layout from '../components/Layout.js'
-//import "../styles/styles.scss"
+import Layout from '../components/Layout/Layout.js'
 
 export default () => (
-	<Layout className="app" />
+	<Layout className="app"/>
 )
