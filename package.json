@@ -21,16 +21,34 @@
   },
   "homepage": "https://github.com/hans2103/wedding-gallery-wall#readme",
   "dependencies": {
+    "@react-spring/web": "^9.0.0-beta.34",
     "@zeit/next-sass": "^1.0.1",
     "classnames": "^2.2.6",
+    "color": "^3.1.2",
     "illusion": "github:timble/illusion",
+    "lodash.clamp": "^4.0.3",
+    "lodash.merge": "^4.6.2",
     "modern-css-reset": "^1.1.0",
     "netlify-cli": "^2.32.0",
     "next": "^9.2.1",
     "node-sass": "^4.13.1",
+    "prop-types": "^15.6.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
+    "react-icons": "^3.9.0",
+    "react-is": "^16.12.0",
+    "react-photo-gallery": "^8.0.0",
     "react-spring-lightbox": "^1.2.0",
-    "styled-components": "^5.0.1"
+    "styled-components": "^5.0.1",
+    "styled-normalize": "^8.0.7"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "devDependencies": {
+    "babel-plugin-styled-components": "^1.10.7"
   }
 }
