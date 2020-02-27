@@ -20,4 +20,8 @@ Desktop.ini
 /node_modules
 
 /.env
-/.next/
+.next
+
+# Local Netlify folder
+.netlify
+out
