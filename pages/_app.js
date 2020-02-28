@@ -2,23 +2,74 @@ import App from 'next/app';
 import React from 'react';
 import { createGlobalStyle, ThemeProvider } from 'styled-components';
 import styledNormalize from 'styled-normalize';
+import Head from "next/head";
+import TagManager from 'react-gtm-module'
+
+const tagManagerArgs = {
+	gtmId: 'GTM-KZ7Z257'
+};
 
 export default class MyApp extends App {
+	componentDidMount () {
+		TagManager.initialize(tagManagerArgs);
+	}
+
 	render() {
 		const { Component, pageProps } = this.props;
 		return (
 			<>
+				<Head>
+					<title>Schrikkeldag 2020 - Hans en Marijke</title>
+					<meta
+						name="robots"
+						content="noindex,nofollow"
+					/>
+					<link
+						rel="apple-touch-icon"
+						sizes="180x180"
+						href="/favicon/apple-touch-icon.png"
+					/>
+					<link
+						rel="icon"
+						type="image/png"
+						sizes="32x32"
+						href="/favicon/favicon-32x32.png"
+					/>
+					<link
+						rel="icon"
+						type="image/png"
+						sizes="16x16"
+						href="/favicon/favicon-16x16.png"
+					/>
+					<link
+						rel="manifest"
+						href="/favicon/site.webmanifest"
+					/>
+					<link
+						rel="mask-icon"
+						href="/favicon/safari-pinned-tab.svg"
+						color="#ff0099"
+					/>
+					<meta
+						name="msapplication-TileColor"
+						content="#b9e0d2"
+					/>
+					<meta
+						name="theme-color"
+						content="#b9e0d2"
+					/>
+				</Head>
 				{/* Adds some basic body styles */}
 				<DefaultStyles />
 
 				<ThemeProvider
 					theme={{
-						pageBackgroundColor: '#101010',
+						pageBackgroundColor: '#4F4B54',
 						pageContentFontColor: 'rgba(255, 0, 153, 1)',
 						pageContentLinkHoverColor: 'rgba(255, 0, 153, 1)',
 						pageContentSelectionColor: 'rgba(255, 0, 153, 1)',
 						headerNavFontColor: 'rgba(255, 0, 153, 1)',
-						accentColor: '#1f1f1f'
+						accentColor: '#4F4B54'
 					}}
 				>
 					<Component {...pageProps} />
@@ -65,7 +116,7 @@ const DefaultStyles = createGlobalStyle`
 		justify-content: center;
 		align-items: center;
 		color: #ff0099;
-		background: rgba(46, 184, 178, .5);
+		background: #B9E0D2;
 		background-image: url(tile.png);
 		font-family: SwitzeraADFRegular, Verdana, arial, serif;
 		
