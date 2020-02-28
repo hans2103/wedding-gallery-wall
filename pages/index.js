@@ -8,11 +8,19 @@ export default () => (
 	<Container>
 		<Warning/>
 		<HeaderH1/>
-		<GalleryLightbox
-			galleryTitle="Het aanzoek"
-			imageMasonryDirection="column"
-			images={data.photos[0].photos}
-		/>
+		{
+			data.photos.map((data, i) => {
+				return (
+					<GalleryLightbox
+						key={i}
+						galleryTitle={data.title}
+						imageMasonryDirection="column"
+						images={data.photos}
+					/>
+				)
+			})
+		}
+
 		<GalleryLightbox
 			galleryTitle="Schrikkeldag 2020: H&M"
 			imageMasonryDirection="column"
