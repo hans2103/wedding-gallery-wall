@@ -64,12 +64,12 @@ export default class MyApp extends App {
 
 				<ThemeProvider
 					theme={{
-						pageBackgroundColor: '#101010',
+						pageBackgroundColor: '#4F4B54',
 						pageContentFontColor: 'rgba(255, 0, 153, 1)',
 						pageContentLinkHoverColor: 'rgba(255, 0, 153, 1)',
 						pageContentSelectionColor: 'rgba(255, 0, 153, 1)',
 						headerNavFontColor: 'rgba(255, 0, 153, 1)',
-						accentColor: '#1f1f1f'
+						accentColor: '#4F4B54'
 					}}
 				>
 					<Component {...pageProps} />
@@ -116,7 +116,7 @@ const DefaultStyles = createGlobalStyle`
 		justify-content: center;
 		align-items: center;
 		color: #ff0099;
-		background: rgba(46, 184, 178, .5);
+		background: #B9E0D2;
 		background-image: url(tile.png);
 		font-family: SwitzeraADFRegular, Verdana, arial, serif;
 		
