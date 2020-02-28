@@ -20,12 +20,6 @@ export default () => (
 				)
 			})
 		}
-
-		<GalleryLightbox
-			galleryTitle="Schrikkeldag 2020: H&M"
-			imageMasonryDirection="column"
-			images={data.photos[1].photos}
-		/>
 	</Container>
 );
 
