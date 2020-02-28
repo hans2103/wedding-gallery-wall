@@ -40,7 +40,7 @@ LightboxHeader.propTypes = {
 export default LightboxHeader;
 
 const GalleryHeading = styled.h2`
-  margin: 0 0 5px 0;
+  margin: 0 0 .375em 0;
   font-weight: normal;
 `;
 
@@ -80,7 +80,7 @@ const LeftSideDescriptionContainer = styled.div`
   border-left-width: 3px;
   border-left-color: ${({ theme }) => theme.pageContentLinkHoverColor};
   border-left-style: solid;
-  padding: 8px 0 8px 10px;
+  padding: .375em 0 .375em .75em;
 `;
 
 const TopHeaderBar = styled.header`
@@ -88,7 +88,8 @@ const TopHeaderBar = styled.header`
   cursor: auto;
   display: flex;
   justify-content: space-between;
-  padding: 10px 2px 10px 20px;
+  padding: .75em .375em .75em 1em;
+  font-size: .75rem;
   color: ${({ theme }) => theme.headerNavFontColor};
   background-color: ${({ theme }) =>
     Color(theme.pageBackgroundColor)

@@ -154,6 +154,8 @@ const GalleryContainer = styled.section`
   //overflow-y: auto;
   //max-height: calc(100% - 4em);
   //padding: 2em;
+  margin: 0 auto;
+  max-width: 1200px;
 
   > div {
 
@@ -163,7 +165,7 @@ const GalleryContainer = styled.section`
 			border-top-width: 2px;
 			border-top-style: solid;
 			border-top-color: ${({theme}) => theme.pageContentLinkHoverColor};
-			max-width: 1200px;
+			max-width: 100%;
 			width: 100vw;
 			display: grid;
 			grid-gap: 1em;
@@ -173,6 +175,11 @@ const GalleryContainer = styled.section`
 			align-content: center;
 			grid-auto-flow: dense;
 			height: unset !important;
+			
+			@media (max-width: 460px) {
+				grid-column-gap: 0;
+				
+			}
 		}
   }
 `;
