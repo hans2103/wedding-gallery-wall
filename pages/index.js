@@ -3,6 +3,7 @@ import GalleryLightbox from '../components/GalleryLightbox';
 import HeaderH1 from '../components/Header/HeaderH1';
 import data from '../data/data'
 import Warning from "../components/Warning/Warning";
+import ThankYou from "../components/components/ThankYou";
 
 export default () => (
 	<Container>
@@ -20,6 +21,7 @@ export default () => (
 				)
 			})
 		}
+		<ThankYou/>
 	</Container>
 );
 
