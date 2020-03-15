@@ -24,7 +24,7 @@ Desktop.ini
 
 # Local Netlify folder
 .netlify
-/out/*
-!/out/.gitignore
+out/*
+!out/.gitignore
 public/images-800
 public/images-orig
