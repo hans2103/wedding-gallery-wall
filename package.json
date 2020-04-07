@@ -41,8 +41,11 @@
     "react-is": "^16.13.1",
     "react-photo-gallery": "^8.0.0",
     "react-spring-lightbox": "^1.4.7",
-    "styled-components": "^5.0.1",
-    "styled-normalize": "^8.0.7"
+    "styled-components": "^5.1.0",
+    "styled-normalize": "^8.0.7",
+    "isomorphic-unfetch": "latest",
+    "js-cookie": "latest",
+    "next-cookies": "latest"
   },
   "browserslist": [
     ">0.2%",

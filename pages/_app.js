@@ -1,6 +1,6 @@
 import App from 'next/app';
 import React from 'react';
-import { createGlobalStyle, ThemeProvider } from 'styled-components';
+import {createGlobalStyle, ThemeProvider} from 'styled-components';
 import styledNormalize from 'styled-normalize';
 import Head from "next/head";
 import TagManager from 'react-gtm-module'
@@ -10,57 +10,16 @@ const tagManagerArgs = {
 };
 
 export default class MyApp extends App {
-	componentDidMount () {
+	componentDidMount() {
 		TagManager.initialize(tagManagerArgs);
 	}
 
 	render() {
-		const { Component, pageProps } = this.props;
+		const {Component, pageProps} = this.props;
 		return (
 			<>
-				<Head>
-					<title>Schrikkeldag 2020 - Hans en Marijke</title>
-					<meta
-						name="robots"
-						content="noindex,nofollow"
-					/>
-					<link
-						rel="apple-touch-icon"
-						sizes="180x180"
-						href="/favicon/apple-touch-icon.png"
-					/>
-					<link
-						rel="icon"
-						type="image/png"
-						sizes="32x32"
-						href="/favicon/favicon-32x32.png"
-					/>
-					<link
-						rel="icon"
-						type="image/png"
-						sizes="16x16"
-						href="/favicon/favicon-16x16.png"
-					/>
-					<link
-						rel="manifest"
-						href="/favicon/site.webmanifest"
-					/>
-					<link
-						rel="mask-icon"
-						href="/favicon/safari-pinned-tab.svg"
-						color="#ff0099"
-					/>
-					<meta
-						name="msapplication-TileColor"
-						content="#b9e0d2"
-					/>
-					<meta
-						name="theme-color"
-						content="#b9e0d2"
-					/>
-				</Head>
 				{/* Adds some basic body styles */}
-				<DefaultStyles />
+				<DefaultStyles/>
 
 				<ThemeProvider
 					theme={{
@@ -87,26 +46,16 @@ export default class MyApp extends App {
  */
 const DefaultStyles = createGlobalStyle`
  ${styledNormalize}
- 	* {
+    *,
+    *::before,
+    *::after {
 		box-sizing: border-box;
 		padding: 0;
 		margin: 0;
 	}
 
 	html {
-  		font-size: 16px;
-	}
-
-	@media screen and (min-width: 320px) {
-  		html {
-    		font-size: calc(16px + 6 * ((100vw - 320px) / 680));
-  		}
-	}
-
-	@media screen and (min-width: 1200px) {
-  		html {
-    		font-size: 22px;
-  		}
+  		font-size: calc(1em + .16vw);
 	}
 
 	body {
