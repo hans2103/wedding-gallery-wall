@@ -48,10 +48,7 @@ const Layout = props => (
 		</Head>
 		<Container>
 			<Logout/>
-
-			<main>
-				<div className="container">{props.children}</div>
-			</main>
+			{props.children}
 		</Container>
 	</>
 );
@@ -61,7 +58,6 @@ const Container = styled.div`
 	height: 100vh;
 	width: 100%;
 	user-select: none;
-	//overflow: hidden;
 	  
 	> * + * {
 		margin-top: 1.5em;
