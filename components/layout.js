@@ -47,7 +47,6 @@ const Layout = props => (
 			/>
 		</Head>
 		<Container>
-			<Logout/>
 			{props.children}
 		</Container>
 	</>
@@ -55,8 +54,8 @@ const Layout = props => (
 
 const Container = styled.div`
 	padding: .75em 0;
-	height: 100vh;
-	width: 100%;
+    width: 100vw;
+    height: 100vh;
 	user-select: none;
 	  
 	> * + * {

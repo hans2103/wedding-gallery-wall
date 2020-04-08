@@ -2,7 +2,6 @@ import App from 'next/app';
 import React from 'react';
 import {createGlobalStyle, ThemeProvider} from 'styled-components';
 import styledNormalize from 'styled-normalize';
-import Head from "next/head";
 import TagManager from 'react-gtm-module'
 
 const tagManagerArgs = {
