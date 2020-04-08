@@ -1,17 +1,17 @@
 import React, {useState} from 'react'
 import fetch from 'isomorphic-unfetch'
 import {login} from '../utils/auth'
-import styled from "styled-components";
+import styled from 'styled-components'
 
 const Login = () => {
-	const [userData, setUserData] = useState({username: '', error: ''});
+	const [userData, setUserData] = useState({username: '', error: ''})
 
 	const handleSubmit = async event => {
-		event.preventDefault();
-		setUserData(Object.assign({}, userData, {error: ''}));
+		event.preventDefault()
+		setUserData(Object.assign({}, userData, {error: ''}))
 
-		const username = userData.username;
-		const url = '/api/login';
+		const username = userData.username
+		const url = '/api/login'
 
 		try {
 			const response = await fetch(url, {
@@ -19,31 +19,31 @@ const Login = () => {
 
 				headers: {'Content-Type': 'application/json'},
 				body: JSON.stringify({username}),
-			});
+			})
 			if (response.status === 200) {
-				const {token} = await response.json();
+				const {token} = await response.json()
 				await login({token})
 			} else {
-				console.log('Login failed.');
+				console.log('Login failed.')
 				// https://github.com/developit/unfetch#caveats
-				let error = new Error(response.statusText);
-				error.response = response;
+				let error = new Error(response.statusText)
+				error.response = response
 				throw error
 			}
 		} catch (error) {
 			console.error(
 				'You have an error in your code or there are Network issues.',
 				error
-			);
+			)
 
-			const {response} = error;
+			const {response} = error
 			setUserData(
 				Object.assign({}, userData, {
 					error: response ? response.statusText : error.message,
 				})
 			)
 		}
-	};
+	}
 
 	return (
 		<Wrapper>
@@ -62,13 +62,13 @@ const Login = () => {
 					}
 				/>
 
-				<Button type="submit">Sesam open u</Button>
+				<Button type="submit">Login</Button>
 
-				{userData.error && <Error>Error: {userData.error}</Error>}
+				{userData.error && <p className="error">Error: {userData.error}</p>}
 			</Form>
 		</Wrapper>
 	)
-};
+}
 
 const Wrapper = styled.div`
     display: flex;
@@ -131,11 +131,5 @@ const Button = styled.button`
     	background: rgba(255,255,255,.9);
     }
 `;
-
-const Error = styled.p`
-	margin: 0.5rem 0 0;
-	color: #ff0099;
-`;
-
 
 export default Login
