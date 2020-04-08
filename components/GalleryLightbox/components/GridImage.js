@@ -96,8 +96,6 @@ const ImageContainer = styled.div`
     }
   }
 
-  // display: block;
-  // position: absolute;
   cursor: pointer;
   border-width: 2px;
   border-color: transparent;
