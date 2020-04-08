@@ -158,7 +158,7 @@ const GalleryContainer = styled.section`
 
 	  > div {
 			margin: 0 auto;
-			padding-top: 1em;
+			padding-top: 1.5em;
 			border-top-width: 2px;
 			border-top-style: solid;
 			border-top-color: ${({theme}) => theme.pageContentLinkHoverColor};
@@ -166,8 +166,8 @@ const GalleryContainer = styled.section`
 			width: 100vw;
 			display: grid;
 			grid-gap: 1em;
-			grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-			grid-auto-rows: calc(200px - 1em);
+			grid-template-columns: repeat(auto-fit, minmax(10.5em, 1fr));
+			grid-auto-rows: calc(12em - 1em);
 			justify-content: center;
 			align-content: center;
 			grid-auto-flow: dense;
