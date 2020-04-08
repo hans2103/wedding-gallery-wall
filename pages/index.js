@@ -9,7 +9,7 @@ import React from 'react'
 import Router from 'next/router'
 import fetch from 'isomorphic-unfetch'
 import nextCookie from 'next-cookies'
-import {withAuthSync} from '../utils/auth'
+import { withAuthSync } from '../utils/auth'
 import getHost from '../utils/get-host'
 
 const Home = props => {
@@ -32,28 +32,28 @@ const Home = props => {
 			<ThankYou/>
 		</Layout>
 	)
-};
+}
 
 Home.getInitialProps = async ctx => {
-	const {token} = nextCookie(ctx);
-	const apiUrl = getHost(ctx.req) + '/api/album';
+	const { token } = nextCookie(ctx)
+	const apiUrl = getHost(ctx.req) + '/api/index'
 
 	const redirectOnError = () =>
 		typeof window !== 'undefined'
 			? Router.push('/login')
-			: ctx.res.writeHead(302, {Location: '/login'}).end();
+			: ctx.res.writeHead(302, { Location: '/login' }).end()
 
 	try {
 		const response = await fetch(apiUrl, {
 			credentials: 'include',
 			headers: {
-				Authorization: JSON.stringify({token}),
+				Authorization: JSON.stringify({ token }),
 			},
-		});
+		})
 
 		if (response.ok) {
-			const js = await response.json();
-			console.log('js', js);
+			const js = await response.json()
+			console.log('js', js)
 			return js
 		} else {
 			// https://github.com/developit/unfetch#caveats
@@ -63,6 +63,6 @@ Home.getInitialProps = async ctx => {
 		// Implementation or Network error
 		return redirectOnError()
 	}
-};
+}
 
 export default withAuthSync(Home)
