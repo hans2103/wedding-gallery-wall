@@ -54,7 +54,7 @@ const Layout = props => (
 
 const Container = styled.div`
 	padding: .75em 0;
-    width: calc(100vw - 3em);
+    width: 100%;
     height: calc(100vh - 3em);
 	user-select: none;
 	  
