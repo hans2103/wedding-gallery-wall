@@ -58,7 +58,6 @@ const DefaultStyles = createGlobalStyle`
 	}
 
 	body {
-		padding: .75em;
 		min-height: 100vh;
 		display: flex;
 		flex-direction: column;
