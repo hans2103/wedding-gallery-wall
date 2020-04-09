@@ -151,7 +151,7 @@ class BlogImageGallery extends React.Component {
 export default BlogImageGallery;
 
 const GalleryContainer = styled.section`
-  margin: 0 auto;
+  margin: 1.5em auto;
   max-width: 1200px;
 
   > div {
