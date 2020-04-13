@@ -1,4 +1,3 @@
-import Link from 'next/link'
 import {logout} from '../utils/auth'
 import styled from "styled-components";
 
@@ -25,7 +24,7 @@ const Button = styled.button`
     transition: background .2s cubic-bezier(.195,.4,.45,.785),transform .1s cubic-bezier(.195,.4,.45,.785),box-shadow .1s cubic-bezier(.195,.4,.45,.785);
     
     &:hover {
-    	background: rgba(255,255,255,.9);
+    	background: rgba(255,255,255,.8);
     }
 }
 `;

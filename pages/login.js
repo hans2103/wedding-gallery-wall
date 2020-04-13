@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import fetch from 'isomorphic-unfetch'
 import {login} from '../utils/auth'
 import styled from 'styled-components'
+import Layout from '../components/layout'
 
 const Login = () => {
 	const [userData, setUserData] = useState({username: '', error: ''})
@@ -46,36 +47,38 @@ const Login = () => {
 	}
 
 	return (
-		<Wrapper>
-			<Form onSubmit={handleSubmit}>
-				<Label htmlFor="username">Wachtwoord</Label>
+		<Layout>
+			<Wrapper>
+				<Form onSubmit={handleSubmit}>
+					<Label htmlFor="username">Wachtwoord</Label>
 
-				<Input
-					type="text"
-					id="username"
-					name="username"
-					value={userData.username}
-					onChange={event =>
-						setUserData(
-							Object.assign({}, userData, {username: event.target.value})
-						)
-					}
-				/>
+					<Input
+						type="text"
+						id="username"
+						name="username"
+						value={userData.username}
+						onChange={event =>
+							setUserData(
+								Object.assign({}, userData, {username: event.target.value})
+							)
+						}
+					/>
 
-				<Button type="submit">Login</Button>
+					<Button type="submit">Login</Button>
 
-				{userData.error && <p className="error">Error: {userData.error}</p>}
-			</Form>
-		</Wrapper>
+					{userData.error && <p className="error">Error: {userData.error}</p>}
+				</Form>
+			</Wrapper>
+		</Layout>
 	)
 }
 
 const Wrapper = styled.div`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
-    height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100vw;
+	height: 100vh;
 `;
 
 const Form = styled.form`
@@ -128,7 +131,7 @@ const Button = styled.button`
     transition: background .2s cubic-bezier(.195,.4,.45,.785),transform .1s cubic-bezier(.195,.4,.45,.785),box-shadow .1s cubic-bezier(.195,.4,.45,.785);
     
     &:hover {
-    	background: rgba(255,255,255,.9);
+    	background: rgba(255,255,255,.8);
     }
 `;
 
