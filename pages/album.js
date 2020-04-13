@@ -1,11 +1,11 @@
 import useAuthentication from '../lib/useAuthentication'
 
-const Album = props => {
+const Page = props => {
 	return <div>Welcome to next.js!</div>
 }
-Album.getInitialProps = async ({ req, res }) => {
-	const securitySettings = useAuthentication(req, res)
-	return securitySettings
+
+Page.getInitialProps = async ({ req, res }) => {
+	return useAuthentication(req, res)
 }
 
-export default Album
+export default Page
