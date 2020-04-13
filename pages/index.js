@@ -1,68 +1,45 @@
 import Layout from '../components/layout'
-import GalleryLightbox from '../components/GalleryLightbox';
-import HeaderH1 from '../components/Header/HeaderH1';
-import data from '../data/data'
-import Warning from "../components/Warning/Warning";
-import ThankYou from "../components/components/ThankYou";
+import Link from 'next/link'
+import styled from 'styled-components'
+import HeaderH1 from '../components/Header/HeaderH1'
+import Warning from '../components/Warning/Warning'
 
-import React from 'react'
-import Router from 'next/router'
-import fetch from 'isomorphic-unfetch'
-import nextCookie from 'next-cookies'
-import { withAuthSync } from '../utils/auth'
-import getHost from '../utils/get-host'
+export default () => (
+	<Layout>
+		<Warning/>
+		<HeaderH1/>
+		<Block>
+			<Link href="album">
+				<a>fotoalbum</a>
+			</Link>
+		</Block>
+	</Layout>
+);
 
-const Home = props => {
-	return (
-		<Layout>
-			<Warning/>
-			<HeaderH1/>
-			{
-				data.photos.map((data, i) => {
-					return (
-						<GalleryLightbox
-							key={i}
-							galleryTitle={data.title}
-							imageMasonryDirection="column"
-							images={data.photos}
-						/>
-					)
-				})
-			}
-			<ThankYou/>
-		</Layout>
-	)
-}
-
-Home.getInitialProps = async ctx => {
-	const { token } = nextCookie(ctx)
-	const apiUrl = getHost(ctx.req) + '/api/index'
-
-	const redirectOnError = () =>
-		typeof window !== 'undefined'
-			? Router.push('/login')
-			: ctx.res.writeHead(302, { Location: '/login' }).end()
-
-	try {
-		const response = await fetch(apiUrl, {
-			credentials: 'include',
-			headers: {
-				Authorization: JSON.stringify({ token }),
-			},
-		})
-
-		if (response.ok) {
-			const js = await response.json()
-			console.log('js', js)
-			return js
-		} else {
-			// https://github.com/developit/unfetch#caveats
-			return await redirectOnError()
+const Block = styled.div`
+	display: flex;
+	justify-content: center;
+	
+	> a {
+		-webkit-appearance: none;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		min-height: 2.25em;
+		font-size: .9rem;
+		line-height: 1;
+		padding: .2963em .66667em;
+		color: #ff0099;
+		background: #fff;
+		border: 1px solid rgba(0,0,0,.35);
+		border-radius: .375rem;
+		cursor: pointer;
+		box-shadow: 0 0.1875rem 0 0 rgba(31,27,55,.15);
+		text-decoration: none;
+		transition: background .2s cubic-bezier(.195,.4,.45,.785),transform .1s cubic-bezier(.195,.4,.45,.785),box-shadow .1s cubic-bezier(.195,.4,.45,.785);
+		
+		&:hover {
+			background: rgba(255,255,255,.8);
 		}
-	} catch (error) {
-		// Implementation or Network error
-		return redirectOnError()
 	}
-}
-
-export default withAuthSync(Home)
+	`;

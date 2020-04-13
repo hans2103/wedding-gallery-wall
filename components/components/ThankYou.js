@@ -22,6 +22,7 @@ const Text = styled.p`
 	margin-left: auto;
 	margin-right: auto;
 	max-width: 90%;
+	text-align: center;
 `;
 
 export default ThankYou;
