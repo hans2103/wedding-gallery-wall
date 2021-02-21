@@ -13,7 +13,7 @@ import { withAuthSync } from '../utils/auth'
 import getHost from '../utils/get-host'
 import Logout from "../components/logout";
 
-const Album = props => {
+const Album = () => {
 	return (
 		<Layout>
 			<Logout/>
