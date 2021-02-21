@@ -15,7 +15,7 @@ const GridImage = ({key, index, left, top, photo, onClick}) => {
 			className={className}
 		>
 			<OverlayContainer>
-				<Image src={src} alt={alt} caption={caption}/>
+				<Image src={src} alt={alt} caption={caption} loading="lazy"/>
 				<Caption>
 					<h4>{caption}</h4>
 				</Caption>
