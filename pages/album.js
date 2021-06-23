@@ -55,7 +55,7 @@ Album.getInitialProps = async ctx => {
 
 		if (response.ok) {
 			const js = await response.json()
-			console.log('js', js)
+			//console.log('js', js)
 			return js
 		} else {
 			// https://github.com/developit/unfetch#caveats
