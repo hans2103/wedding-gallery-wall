@@ -20,13 +20,13 @@ class BlogImageGallery extends React.Component {
                 alt: PropTypes.string.isRequired,
                 className: PropTypes.string.isRequired,
                 width: PropTypes.number,
-                height: PropTypes.number
+                height: PropTypes.number,
             })
-        ).isRequired
+        ).isRequired,
     };
 
     static defaultProps = {
-        imageMasonryDirection: 'column'
+        imageMasonryDirection: 'column',
     };
 
     constructor() {
@@ -35,46 +35,46 @@ class BlogImageGallery extends React.Component {
         this.state = {
             currentImageIndex: 0,
             lightboxIsOpen: false,
-            clientSide: false
+            clientSide: false,
         };
     }
 
     componentDidMount() {
-        this.setState({clientSide: true});
+        this.setState({ clientSide: true });
     }
 
-    openLightbox = (e, {index}) => {
+    openLightbox = (e, { index }) => {
         this.setState({
             currentImageIndex: index,
-            lightboxIsOpen: true
+            lightboxIsOpen: true,
         });
     };
 
     closeLightbox = () => {
         this.setState({
-            lightboxIsOpen: false
+            lightboxIsOpen: false,
         });
     };
 
     gotoPrevious = () => {
-        const {currentImageIndex} = this.state;
+        const { currentImageIndex } = this.state;
 
         // If the current image isn't the first in the list, go to the previous
         if (currentImageIndex > 0) {
             this.setState({
-                currentImageIndex: currentImageIndex - 1
+                currentImageIndex: currentImageIndex - 1,
             });
         }
     };
 
     gotoNext = () => {
-        const {images} = this.props;
-        const {currentImageIndex} = this.state;
+        const { images } = this.props;
+        const { currentImageIndex } = this.state;
 
         // If the current image isn't the list in the list, go to the next
         if (currentImageIndex + 1 < images.length) {
             this.setState({
-                currentImageIndex: currentImageIndex + 1
+                currentImageIndex: currentImageIndex + 1,
             });
         }
     };
@@ -84,7 +84,7 @@ class BlogImageGallery extends React.Component {
      *
      * @int containerWidth The current width of the image grid
      */
-    columnConfig = containerWidth => {
+    columnConfig = (containerWidth) => {
         let columns = 1;
         if (containerWidth >= 500) columns = 2;
         if (containerWidth >= 900) columns = 3;
@@ -94,8 +94,8 @@ class BlogImageGallery extends React.Component {
     };
 
     render() {
-        const {currentImageIndex, lightboxIsOpen, clientSide} = this.state;
-        const {images, galleryTitle, imageMasonryDirection} = this.props;
+        const { currentImageIndex, lightboxIsOpen, clientSide } = this.state;
+        const { images, galleryTitle, imageMasonryDirection } = this.props;
 
         return (
             <GalleryContainer>
@@ -117,7 +117,11 @@ class BlogImageGallery extends React.Component {
                     onClose={this.closeLightbox}
                     onPrev={this.gotoPrevious}
                     onNext={this.gotoNext}
-                    images={images}
+                    images={images.map(({ alt, caption, src }) => ({
+                        alt,
+                        caption,
+                        src,
+                    }))}
                     currentIndex={currentImageIndex}
                     galleryTitle={galleryTitle}
                     renderHeader={() => (
@@ -128,14 +132,14 @@ class BlogImageGallery extends React.Component {
                             onClose={this.closeLightbox}
                         />
                     )}
-                    renderPrevButton={({canPrev}) => (
+                    renderPrevButton={({ canPrev }) => (
                         <LightboxArrowButton
                             position="left"
                             onClick={this.gotoPrevious}
                             disabled={!canPrev}
                         />
                     )}
-                    renderNextButton={({canNext}) => (
+                    renderNextButton={({ canNext }) => (
                         <LightboxArrowButton
                             position="right"
                             onClick={this.gotoNext}
@@ -182,16 +186,13 @@ const GalleryContainer = styled.section`
 `;
 
 const StyledLightbox = styled(Lightbox)`
-  background: ${({theme}) =>
-    Color(theme.accentColor)
-        .alpha(0.95)
-        .hsl()
-        .string()};
-  * ::selection {
-    background: ${({theme}) => theme.pageContentSelectionColor};
-  }
-  * ::-moz-selection {
-    background: ${({theme}) =>
+    background: ${({ theme }) =>
+    Color(theme.accentColor).alpha(0.95).hsl().string()};
+    * ::selection {
+        background: ${({ theme }) => theme.pageContentSelectionColor};
+    }
+    * ::-moz-selection {
+        background: ${({ theme }) =>
     new Color(theme.pageContentSelectionColor).darken(0.57).hex()};
   }
   
