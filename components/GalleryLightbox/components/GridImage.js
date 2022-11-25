@@ -111,7 +111,8 @@ const Image = styled.img`
   //height: inherit;
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
+  overflow: hidden;
   position: absolute;
   transition: all .25s cubic-bezier(0.195, 0.4, 0.45, 0.785) 0ms;
 `;
