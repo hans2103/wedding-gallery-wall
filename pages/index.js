@@ -10,7 +10,7 @@ export default () => (
 		<HeaderH1/>
 		<Block>
 			<Link href="album">
-				<a>fotoalbum</a>
+				fotoalbum
 			</Link>
 		</Block>
 	</Layout>
