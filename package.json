@@ -20,10 +20,10 @@
   },
   "homepage": "https://github.com/hans2103/wedding-gallery-wall#readme",
   "dependencies": {
-    "@react-spring/web": "^9.4.4",
-    "@use-gesture/react": "^10.2.11",
+    "@react-spring/web": "^9.5.5",
+    "@use-gesture/react": "^10.2.22",
     "basic-auth": "^2.0.1",
-    "classnames": "^2.3.1",
+    "classnames": "^2.3.2",
     "color": "^4.2.3",
     "illusion": "github:timble/illusion",
     "isomorphic-unfetch": "latest",
@@ -34,15 +34,15 @@
     "next": "latest",
     "next-cookies": "latest",
     "prop-types": "^15.8.1",
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "react-gtm-module": "^2.0.11",
-    "react-icons": "^4.3.1",
-    "react-is": "^18.0.0",
+    "react-icons": "^4.6.0",
+    "react-is": "^18.2.0",
     "react-photo-gallery": "^8.0.0",
-    "react-spring-lightbox": "^1.6.0",
-    "sass": "^1.50.0",
-    "styled-components": "^5.3.5",
+    "react-spring-lightbox": "^1.7.1",
+    "sass": "^1.56.1",
+    "styled-components": "^5.3.6",
     "styled-normalize": "^8.0.7"
   },
   "browserslist": [
@@ -53,6 +53,6 @@
   ],
   "devDependencies": {
     "babel-plugin-styled-components": "^2.0.7",
-    "webpack": "^5.72.0"
+    "webpack": "^5.75.0"
   }
 }
