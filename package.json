@@ -19,7 +19,7 @@
     "url": "https://github.com/hans2103/wedding-gallery-wall/issues"
   },
   "engines": {
-    "node": ">=16"
+    "node": ">=14"
   },
   "homepage": "https://github.com/hans2103/wedding-gallery-wall#readme",
   "dependencies": {
