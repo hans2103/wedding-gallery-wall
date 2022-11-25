@@ -40,10 +40,10 @@ class BlogImageGallery extends React.Component {
     }
 
     componentDidMount() {
-        this.setState({ clientSide: true });
+        this.setState({clientSide: true});
     }
 
-    openLightbox = (e, { index }) => {
+    openLightbox = (e, {index}) => {
         this.setState({
             currentImageIndex: index,
             lightboxIsOpen: true,
@@ -57,7 +57,7 @@ class BlogImageGallery extends React.Component {
     };
 
     gotoPrevious = () => {
-        const { currentImageIndex } = this.state;
+        const {currentImageIndex} = this.state;
 
         // If the current image isn't the first in the list, go to the previous
         if (currentImageIndex > 0) {
@@ -68,8 +68,8 @@ class BlogImageGallery extends React.Component {
     };
 
     gotoNext = () => {
-        const { images } = this.props;
-        const { currentImageIndex } = this.state;
+        const {images} = this.props;
+        const {currentImageIndex} = this.state;
 
         // If the current image isn't the list in the list, go to the next
         if (currentImageIndex + 1 < images.length) {
@@ -94,8 +94,8 @@ class BlogImageGallery extends React.Component {
     };
 
     render() {
-        const { currentImageIndex, lightboxIsOpen, clientSide } = this.state;
-        const { images, galleryTitle, imageMasonryDirection } = this.props;
+        const {currentImageIndex, lightboxIsOpen, clientSide} = this.state;
+        const {images, galleryTitle, imageMasonryDirection} = this.props;
 
         return (
             <GalleryContainer>
@@ -117,7 +117,7 @@ class BlogImageGallery extends React.Component {
                     onClose={this.closeLightbox}
                     onPrev={this.gotoPrevious}
                     onNext={this.gotoNext}
-                    images={images.map(({ alt, caption, src }) => ({
+                    images={images.map(({alt, caption, src}) => ({
                         alt,
                         caption,
                         src,
@@ -132,14 +132,14 @@ class BlogImageGallery extends React.Component {
                             onClose={this.closeLightbox}
                         />
                     )}
-                    renderPrevButton={({ canPrev }) => (
+                    renderPrevButton={({canPrev}) => (
                         <LightboxArrowButton
                             position="left"
                             onClick={this.gotoPrevious}
                             disabled={!canPrev}
                         />
                     )}
-                    renderNextButton={({ canNext }) => (
+                    renderNextButton={({canNext}) => (
                         <LightboxArrowButton
                             position="right"
                             onClick={this.gotoNext}
@@ -186,17 +186,18 @@ const GalleryContainer = styled.section`
 `;
 
 const StyledLightbox = styled(Lightbox)`
-    background: ${({ theme }) =>
+    background: ${({theme}) =>
     Color(theme.accentColor).alpha(0.95).hsl().string()};
     * ::selection {
-        background: ${({ theme }) => theme.pageContentSelectionColor};
+        background: ${({theme}) => theme.pageContentSelectionColor};
     }
     * ::-moz-selection {
-        background: ${({ theme }) =>
+        background: ${({theme}) =>
     new Color(theme.pageContentSelectionColor).darken(0.57).hex()};
   }
   
   img {
   height: 100%;
+  object-fit: contain;
   }
 `;
