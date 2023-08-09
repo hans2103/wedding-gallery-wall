@@ -19,12 +19,12 @@
     "url": "https://github.com/hans2103/wedding-gallery-wall/issues"
   },
   "engines": {
-    "node": ">=14"
+    "node": ">=18"
   },
   "homepage": "https://github.com/hans2103/wedding-gallery-wall#readme",
   "dependencies": {
-    "@react-spring/web": "^9.5.5",
-    "@use-gesture/react": "^10.2.22",
+    "@react-spring/web": "^9.7.3",
+    "@use-gesture/react": "^10.2.27",
     "basic-auth": "^2.0.1",
     "classnames": "^2.3.2",
     "color": "^4.2.3",
@@ -40,12 +40,12 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-gtm-module": "^2.0.11",
-    "react-icons": "^4.6.0",
+    "react-icons": "^4.10.1",
     "react-is": "^18.2.0",
     "react-photo-gallery": "^8.0.0",
     "react-spring-lightbox": "^1.7.1",
-    "sass": "^1.56.1",
-    "styled-components": "^5.3.6",
+    "sass": "^1.64.2",
+    "styled-components": "^6.0.7",
     "styled-normalize": "^8.0.7"
   },
   "browserslist": [
@@ -55,7 +55,7 @@
     "not op_mini all"
   ],
   "devDependencies": {
-    "babel-plugin-styled-components": "^2.0.7",
-    "webpack": "^5.75.0"
+    "@types/styled-components": "^5.1.26",
+    "webpack": "^5.88.2"
   }
 }
