@@ -2,7 +2,7 @@ repo_name: hans2103/wedding-gallery-wall
 report_id: b21b374b824a448c6bf69fb131a1673f
 version: 0.1
 repo_type: Public
-timestamp: '2024-01-05T09:23:25+00:00'
+timestamp: '2024-01-11T12:17:38+00:00'
 requested_by: hans2103
 provider: github
 branch: master
@@ -22,13 +22,12 @@ tools:
 - name: Next.js
   description: 'A small framework for server-rendered universal JavaScript apps '
   website_url: https://nextjs.org/
-  version: 13.4.13
   open_source: true
   hosted_saas: false
   category: Languages & Frameworks
   sub_category: Frameworks (Full Stack)
   image_url: https://img.stackshare.io/service/5936/nextjs.png
-  detection_source_url: https://github.com/hans2103/wedding-gallery-wall/blob/master/package-lock.json
+  detection_source_url: https://github.com/hans2103/wedding-gallery-wall/blob/master/package.json
   detection_source: package.json
   last_updated_by: Hans Kuijpers
   last_updated_on: 2020-02-08 21:28:56.000000000 Z
@@ -42,25 +41,38 @@ tools:
   category: Libraries
   sub_category: Javascript UI Libraries
   image_url: https://img.stackshare.io/service/1020/OYIaJ1KK.png
-  detection_source_url: https://github.com/hans2103/wedding-gallery-wall/blob/master/package-lock.json
+  detection_source_url: https://github.com/hans2103/wedding-gallery-wall/blob/master/package.json
   detection_source: package.json
   last_updated_by: Hans Kuijpers
-  last_updated_on: 2023-08-09 11:58:10.000000000 Z
+  last_updated_on: 2023-12-27 08:17:35.000000000 Z
+- name: Sass
+  description: Syntactically Awesome Style Sheets
+  website_url: http://sass-lang.com/
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: CSS Pre-processors / Extensions
+  image_url: https://img.stackshare.io/service/1171/jCR2zNJV.png
+  detection_source_url: https://github.com/hans2103/wedding-gallery-wall/blob/master/package.json
+  detection_source: package.json
+  last_updated_by: Hans Kuijpers
+  last_updated_on: 2020-02-08 21:28:56.000000000 Z
 - name: styled-components
   description: Visual primitives for the component age. Use the best bits of ES6 and
     CSS to style your apps without stress.
   website_url: https://styled-components.com
-  version: 6.0.7
+  version: 6.1.4
   license: MIT
   open_source: true
   hosted_saas: false
   category: Libraries
   sub_category: JavaScript Framework Components
   image_url: https://img.stackshare.io/service/6749/styled-components.png
-  detection_source_url: https://github.com/hans2103/wedding-gallery-wall/blob/master/package-lock.json
+  detection_source_url: https://github.com/hans2103/wedding-gallery-wall/blob/master/package.json
   detection_source: package.json
   last_updated_by: Hans Kuijpers
-  last_updated_on: 2023-08-09 11:58:10.000000000 Z
+  last_updated_on: 2023-12-27 08:17:35.000000000 Z
 - name: Git
   description: Fast, scalable, distributed revision control system
   website_url: http://git-scm.com/
@@ -74,17 +86,17 @@ tools:
 - name: Webpack
   description: A bundler for javascript and friends
   website_url: http://webpack.js.org
-  version: 5.88.2
+  version: 5.89.0
   license: MIT
   open_source: true
   hosted_saas: false
   category: Build, Test, Deploy
   sub_category: JS Build Tools / JS Task Runners
   image_url: https://img.stackshare.io/service/1682/IMG_4636.PNG
-  detection_source_url: https://github.com/hans2103/wedding-gallery-wall/blob/master/package-lock.json
+  detection_source_url: https://github.com/hans2103/wedding-gallery-wall/blob/master/package.json
   detection_source: package.json
   last_updated_by: Hans Kuijpers
-  last_updated_on: 2023-08-09 11:58:10.000000000 Z
+  last_updated_on: 2023-12-27 08:17:35.000000000 Z
 - name: npm
   description: The package manager for JavaScript.
   website_url: https://www.npmjs.com/
@@ -113,17 +125,17 @@ tools:
 - name: "@types/styled-components"
   description: TypeScript definitions for styled-components
   package_url: https://www.npmjs.com/@types/styled-components
-  version: 5.1.26
+  version: 5.1.34
   license: MIT
   open_source: true
   hosted_saas: false
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/16494/default_2e7c1d6d94467a56325f7c984571015e8713a450.png
-  detection_source_url: https://github.com/hans2103/wedding-gallery-wall/blob/master/package-lock.json
+  detection_source_url: https://github.com/hans2103/wedding-gallery-wall/blob/master/package.json
   detection_source: package.json
   last_updated_by: Hans Kuijpers
-  last_updated_on: 2023-08-09 11:58:10.000000000 Z
+  last_updated_on: 2023-12-27 08:17:35.000000000 Z
 - name: basic-auth
   description: Node.js basic auth parser
   package_url: https://www.npmjs.com/basic-auth
@@ -134,24 +146,24 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/17338/default_b39374c3a74b433364bfdbff07be26214bf186fd.png
-  detection_source_url: https://github.com/hans2103/wedding-gallery-wall/blob/master/package-lock.json
+  detection_source_url: https://github.com/hans2103/wedding-gallery-wall/blob/master/package.json
   detection_source: package.json
   last_updated_by: Hans Kuijpers
   last_updated_on: 2020-04-06 14:23:41.000000000 Z
 - name: classnames
   description: A simple utility for conditionally joining classNames together
   package_url: https://www.npmjs.com/classnames
-  version: 2.3.2
+  version: 2.4.0
   license: MIT
   open_source: true
   hosted_saas: false
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/15942/default_4040fefea2f98006727f63d042275b96a275ab2d.png
-  detection_source_url: https://github.com/hans2103/wedding-gallery-wall/blob/master/package-lock.json
+  detection_source_url: https://github.com/hans2103/wedding-gallery-wall/blob/master/package.json
   detection_source: package.json
   last_updated_by: Hans Kuijpers
-  last_updated_on: 2022-11-25 15:04:48.000000000 Z
+  last_updated_on: 2023-12-27 08:17:35.000000000 Z
 - name: color
   description: Color conversion and manipulation with CSS string support
   package_url: https://www.npmjs.com/color
@@ -162,21 +174,20 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/16600/default_9d292a50abc76f1f74581b311ad930a616b1785c.png
-  detection_source_url: https://github.com/hans2103/wedding-gallery-wall/blob/master/package-lock.json
+  detection_source_url: https://github.com/hans2103/wedding-gallery-wall/blob/master/package.json
   detection_source: package.json
   last_updated_by: Hans Kuijpers
   last_updated_on: 2022-04-09 15:36:16.000000000 Z
 - name: js-cookie
   description: A simple, lightweight JavaScript API for handling cookies
   package_url: https://www.npmjs.com/js-cookie
-  version: 3.0.5
   license: MIT
   open_source: true
   hosted_saas: false
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/16441/default_89ba91277e3434b03295bb11d22736632df1d04f.png
-  detection_source_url: https://github.com/hans2103/wedding-gallery-wall/blob/master/package-lock.json
+  detection_source_url: https://github.com/hans2103/wedding-gallery-wall/blob/master/package.json
   detection_source: package.json
   last_updated_by: Hans Kuijpers
   last_updated_on: 2022-04-09 15:36:16.000000000 Z
@@ -190,7 +201,7 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/16314/default_c47f6a56d74fae4d4404d77067b2fa35da6f1924.png
-  detection_source_url: https://github.com/hans2103/wedding-gallery-wall/blob/master/package-lock.json
+  detection_source_url: https://github.com/hans2103/wedding-gallery-wall/blob/master/package.json
   detection_source: package.json
   last_updated_by: Hans Kuijpers
   last_updated_on: 2020-02-27 22:24:40.000000000 Z
@@ -204,10 +215,10 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/15843/default_b71c906aeda030a5e2f1fe40bf12a93be52404ab.png
-  detection_source_url: https://github.com/hans2103/wedding-gallery-wall/blob/master/package-lock.json
+  detection_source_url: https://github.com/hans2103/wedding-gallery-wall/blob/master/package.json
   detection_source: package.json
   last_updated_by: Hans Kuijpers
-  last_updated_on: 2023-08-09 11:58:10.000000000 Z
+  last_updated_on: 2023-12-27 08:17:35.000000000 Z
 - name: react-dom
   description: React package for working with the DOM
   package_url: https://www.npmjs.com/react-dom
@@ -218,49 +229,35 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/15808/default_14fd11531839d935f920b6d55bd6f3528c890ad7.png
-  detection_source_url: https://github.com/hans2103/wedding-gallery-wall/blob/master/package-lock.json
+  detection_source_url: https://github.com/hans2103/wedding-gallery-wall/blob/master/package.json
   detection_source: package.json
   last_updated_by: Hans Kuijpers
-  last_updated_on: 2023-08-09 11:58:10.000000000 Z
+  last_updated_on: 2023-12-27 08:17:35.000000000 Z
 - name: react-icons
   description: SVG React icons of popular icon packs using ES6 imports
   package_url: https://www.npmjs.com/react-icons
-  version: 4.10.1
+  version: 4.12.0
   license: MIT
   open_source: true
   hosted_saas: false
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/16909/default_7b9968788548874538c601457e8dcd9c74bd2051.png
-  detection_source_url: https://github.com/hans2103/wedding-gallery-wall/blob/master/package-lock.json
+  detection_source_url: https://github.com/hans2103/wedding-gallery-wall/blob/master/package.json
   detection_source: package.json
   last_updated_by: Hans Kuijpers
-  last_updated_on: 2023-08-09 11:58:10.000000000 Z
+  last_updated_on: 2023-12-27 08:17:35.000000000 Z
 - name: react-is
   description: Brand checking of React Elements
   package_url: https://www.npmjs.com/react-is
-  version: 16.13.1
+  version: 18.2.0
   license: MIT
   open_source: true
   hosted_saas: false
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/17829/default_2a0f136cfb588dd9053268b73a18a953e8d65590.png
-  detection_source_url: https://github.com/hans2103/wedding-gallery-wall/blob/master/package-lock.json
+  detection_source_url: https://github.com/hans2103/wedding-gallery-wall/blob/master/package.json
   detection_source: package.json
   last_updated_by: Hans Kuijpers
-  last_updated_on: 2023-08-09 11:58:10.000000000 Z
-- name: sass
-  description: A pure JavaScript implementation of Sass
-  package_url: https://www.npmjs.com/sass
-  version: 1.64.2
-  license: MIT
-  open_source: true
-  hosted_saas: false
-  category: Libraries
-  sub_category: npm Packages
-  image_url: https://img.stackshare.io/package/16057/default_5fd43aeff4d6a935abc13737de01a0355210499d.png
-  detection_source_url: https://github.com/hans2103/wedding-gallery-wall/blob/master/package-lock.json
-  detection_source: package.json
-  last_updated_by: Hans Kuijpers
-  last_updated_on: 2023-08-09 11:58:10.000000000 Z
+  last_updated_on: 2023-12-27 08:17:35.000000000 Z
