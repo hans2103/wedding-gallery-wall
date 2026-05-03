@@ -1,0 +1,28 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(pnpm install *)",
+      "Bash(pnpm build *)",
+      "Bash(pnpm view *)",
+      "Bash(npx --yes npm-check-updates)",
+      "Bash(npx --yes npm-check-updates -u --reject \"react,react-dom,react-is\")",
+      "Bash(pnpm why *)",
+      "Bash(npx --yes npm-check-updates -u --filter \"react,react-dom,react-is\")",
+      "Bash(pnpm remove *)",
+      "Bash(pnpm add *)",
+      "Bash(awk 'NR>=42 && NR<=85' /Users/hans2103/.claude/projects/-Users-hans2103-Development-Sites-wedding-gallery-wall/ce14d7f1-4b86-4213-9e4e-6f0834edf46c/tool-results/bebvxs79d.txt)",
+      "Bash(pnpm panda *)",
+      "Bash(pnpm dev *)",
+      "Bash(curl -s http://localhost:3000/album)",
+      "Bash(curl -s -o /tmp/album.html http://localhost:3000/album -w \"%{http_code}\\\\n\")",
+      "Read(//tmp/**)",
+      "Bash(kill bf809ppio *)",
+      "Bash(grep -E \"next dev|next$\")",
+      "Bash(awk '{print $2}')",
+      "Bash(xargs -r kill)",
+      "Bash(grep -oE \"\\\\.[a-z]{4,8}\" /tmp/panda-output.css)",
+      "Bash(awk '/@font-face/,/^}/' /tmp/panda-output.css)",
+      "Bash(awk '/@font-face/,/^[[:space:]]*}[[:space:]]*$/' /tmp/panda-output.css)"
+    ]
+  }
+}

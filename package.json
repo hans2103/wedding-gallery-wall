@@ -4,9 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "next",
-    "build": "next build",
+    "dev": "panda codegen && next",
+    "build": "panda codegen && next build",
     "start": "next start",
+    "prepare": "panda codegen",
     "trouble": "rm -rf node_modules pnpm-lock.yaml && ncu -u && pnpm install"
   },
   "repository": {
@@ -24,30 +25,16 @@
   },
   "homepage": "https://github.com/hans2103/wedding-gallery-wall#readme",
   "dependencies": {
-    "@react-spring/web": "^9.7.3",
-    "@use-gesture/react": "^10.3.0",
-    "basic-auth": "^2.0.1",
-    "classnames": "^2.4.0",
-    "color": "^4.2.3",
-    "illusion": "github:timble/illusion",
-    "isomorphic-unfetch": "latest",
+    "@react-spring/web": "^10.0.3",
+    "@use-gesture/react": "^10.3.1",
     "js-cookie": "latest",
-    "lodash.clamp": "^4.0.3",
-    "lodash.merge": "^4.6.2",
-    "modern-css-reset": "^1.4.0",
     "next": "latest",
-    "next-cookies": "latest",
-    "prop-types": "^15.8.1",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
+    "react": "^19.2.5",
+    "react-dom": "^19.2.5",
     "react-gtm-module": "^2.0.11",
-    "react-icons": "^4.12.0",
-    "react-is": "^18.2.0",
+    "react-icons": "^5.6.0",
     "react-photo-gallery": "^8.0.0",
-    "react-spring-lightbox": "^1.8.0",
-    "sass": "^1.69.5",
-    "styled-components": "^6.1.4",
-    "styled-normalize": "^8.1.0"
+    "react-spring-lightbox": "^1.8.0"
   },
   "browserslist": [
     ">0.2%",
@@ -56,7 +43,12 @@
     "not op_mini all"
   ],
   "devDependencies": {
-    "@types/styled-components": "^5.1.34",
-    "webpack": "^5.89.0"
+    "@pandacss/dev": "^1.11.0",
+    "@types/js-cookie": "^3.0.6",
+    "@types/node": "^25.6.0",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "@types/react-gtm-module": "^2.0.4",
+    "typescript": "^6.0.3"
   }
 }

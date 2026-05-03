@@ -22,6 +22,9 @@ Desktop.ini
 /.env
 .next
 
+# Panda CSS codegen
+styled-system
+
 # Local Netlify folder
 .netlify
 out/*
