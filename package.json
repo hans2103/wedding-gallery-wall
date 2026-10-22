@@ -21,7 +21,10 @@
     "url": "https://github.com/hans2103/wedding-gallery-wall/issues"
   },
   "engines": {
-    "node": ">=18"
+    "node": "24.x"
+  },
+  "volta": {
+    "node": "24.22.1"
   },
   "homepage": "https://github.com/hans2103/wedding-gallery-wall#readme",
   "dependencies": {
@@ -45,7 +48,7 @@
   "devDependencies": {
     "@pandacss/dev": "^1.11.0",
     "@types/js-cookie": "^3.0.6",
-    "@types/node": "^25.6.0",
+    "@types/node": "^24.0.0",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
     "@types/react-gtm-module": "^2.0.4",

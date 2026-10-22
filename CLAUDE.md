@@ -8,7 +8,7 @@ Personal wedding photo album ("Schrikkeldag 2020 - Hans en Marijke"), built with
 
 ## Commands
 
-The project uses **pnpm** (see `pnpm-lock.yaml`). Node `>=18`.
+The project uses **pnpm** (see `pnpm-lock.yaml`). Node **24 LTS** (`engines: 24.x`, pinned via Volta + `.nvmrc`). Vercel does not support newer majors yet, so do not bump to 26 until it is listed there.
 
 - `pnpm dev` — start the Next.js dev server.
 - `pnpm build` — production build (also runs Panda extraction + TypeScript type-check).
